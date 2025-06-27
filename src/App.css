@@ -375,9 +375,10 @@ body {
 
 .hero-flex {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2.5rem;
+  flex-wrap: wrap;
 }
 .hero-reverse {
   flex-direction: row;
@@ -515,4 +516,103 @@ body {
 .stack-category:active, .project-card:active, .cert-card:active {
   transform: scale(0.97) translateY(2px);
   box-shadow: 0 1px 4px rgba(63, 55, 201, 0.10);
+}
+
+.education-card {
+  width: 320px;
+  background: linear-gradient(120deg, #e0e7ff 80%, #f8fafc 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.10);
+  padding: 1.5rem 1.2rem;
+  text-align: left;
+  flex-shrink: 0;
+  margin-left: 2rem;
+}
+.education-card h3 {
+  margin-top: 0;
+  color: #3f37c9;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.education-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.education-card li {
+  margin-bottom: 1.1rem;
+  font-size: 1rem;
+  color: #22223b;
+}
+.edu-year {
+  color: #4f4f4f;
+  font-size: 0.95rem;
+}
+@media (max-width: 1200px) {
+  .hero-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .education-card {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+}
+
+.education-icon {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  font-size: 2.5rem;
+  color: #3f37c9;
+  background: linear-gradient(270deg, #f8fafc, #e0e7ff, #f9c846, #3f37c9, #f8fafc);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: iconPulse 2.5s infinite, cardGradientMove 2.5s ease infinite;
+  transition: color 0.3s;
+}
+.education-card:hover .education-icon {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+.education-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30, 41, 59, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.education-card {
+  position: relative;
+  width: 340px;
+  background: linear-gradient(120deg, #e0e7ff 80%, #f8fafc 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(30, 41, 59, 0.18);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  text-align: left;
+  animation: fadeSlideUp 0.5s;
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #3f37c9;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: #f9c846;
 }

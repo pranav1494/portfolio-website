@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import { FaGithub, FaLinkedin, FaEnvelope, FaStethoscope, FaGlobe, FaBriefcase, FaCarSide, FaAward, FaChartBar, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaStethoscope, FaGlobe, FaBriefcase, FaCarSide, FaAward, FaChartBar, FaInstagram, FaGraduationCap, FaTimes } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -53,14 +53,33 @@ const certifications = [
   }
 ];
 
+const education = [
+  {
+    degree: "B.Tech in Computer Science and Business Systems",
+    school: "Rajalakshmi Engineering College",
+    year: "2022–2026"
+  },
+  {
+    degree: "Higher Secondary Certificate (HSC)",
+    school: "PON Vidyashram, Chennai, India",
+    year: "2021–2022"
+  },
+  {
+    degree: "Secondary School Certificate (SSC)",
+    school: "PON Vidyashram, Chennai, India",
+    year: "2019–2020"
+  }
+];
+
 function App() {
   useEffect(() => {
     AOS.init({ duration: 900, once: false, mirror: true });
   }, []);
 
+  const [showEducation, setShowEducation] = useState(false);
+
   return (
     <div className="portfolio-container">
-      {/* Hero Section */}
       <header className="hero">
         <div className="hero-flex hero-reverse">
           <img src="/profile.jpg" alt="G.Pranav Profile" className="profile-photo" />
@@ -74,9 +93,35 @@ function App() {
               <a href="https://github.com/pranav1494" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/pranav-krish-22286823a/" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="https://www.instagram.com/pranav_krishna14/" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="Instagram"><FaInstagram /></a>
+              <button
+                className="icon-btn"
+                aria-label="Education"
+                onClick={() => setShowEducation(true)}
+                type="button"
+              >
+                <FaGraduationCap />
+              </button>
             </div>
           </div>
         </div>
+        {showEducation && (
+          <div className="education-modal">
+            <div className="education-card">
+              <button className="close-btn" onClick={() => setShowEducation(false)} aria-label="Close"><FaTimes /></button>
+              <FaGraduationCap className="education-icon" />
+              <h3>Education</h3>
+              <ul>
+                {education.map((item, idx) => (
+                  <li key={idx}>
+                    <strong>{item.degree}</strong><br />
+                    {item.school}<br />
+                    <span className="edu-year">{item.year}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Tech Stack Section */}
