@@ -616,3 +616,90 @@ body {
 .close-btn:hover {
   color: #f9c846;
 }
+
+/* General Tools Section */
+.general-tools {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(30, 41, 59, 0.06);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  /* animation-delay: 0.4s; */
+}
+.general-tools:hover {
+  box-shadow: 0 8px 32px rgba(63, 55, 201, 0.18);
+  transform: translateY(-8px) scale(1.02);
+}
+.general-tools h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.7rem;
+  color: #3f37c9;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  overflow: visible;
+}
+.tool-card {
+  background: linear-gradient(120deg, #f8fafc 80%, #e0e7ff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(63, 55, 201, 0.10);
+  padding: 1.5rem 1.2rem;
+  margin: 0.5rem 0;
+  transition: box-shadow 0.3s, transform 0.3s, background 0.7s, color 0.3s;
+  position: relative;
+  overflow: visible;
+  min-width: 140px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: default;
+}
+.tool-card:hover {
+  box-shadow: 0 12px 32px rgba(63, 55, 201, 0.18);
+  transform: scale(1.04) translateY(-8px);
+  background: linear-gradient(270deg, #f8fafc, #e0e7ff, #f9c846, #3f37c9, #f8fafc);
+  background-size: 400% 400%;
+  animation: cardGradientMove 2.5s ease infinite, cardBounce 0.5s;
+  color: #fff;
+  z-index: 10;
+  opacity: 1;
+}
+.tool-icon {
+  color: #3f37c9;
+  font-size: 2.5rem;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  transition: color 0.3s;
+  animation: iconPulse 2.5s infinite, cardGradientMove 2.5s ease infinite;
+}
+.tool-card:hover .tool-icon {
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .tool-list {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .tool-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+    padding: 1.2rem 0.7rem;
+    font-size: 1rem;
+  }
+}

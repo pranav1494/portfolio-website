@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { FaGithub, FaLinkedin, FaEnvelope, FaStethoscope, FaGlobe, FaBriefcase, FaCarSide, FaAward, FaChartBar, FaInstagram, FaGraduationCap, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaStethoscope, FaGlobe, FaBriefcase, FaCarSide, FaAward, FaChartBar, FaInstagram, FaGraduationCap, FaTimes, FaGitAlt, FaDatabase, FaCloud } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -155,6 +155,41 @@ function App() {
             <ul>
               <li>UiPath</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* General Tools Section */}
+      <section className="general-tools">
+        <h3>General Tools</h3>
+        <div className="tool-list">
+          <div className="tool-card" data-aos="slide-right" title="Git">
+            <FaGitAlt className="tool-icon" />
+            <div>Git</div>
+          </div>
+          <div className="tool-card" data-aos="slide-right" title="GitHub">
+            <FaGithub className="tool-icon" />
+            <div>GitHub</div>
+          </div>
+          <div className="tool-card" data-aos="slide-right" title="Render">
+            <FaGlobe className="tool-icon" />
+            <div>Render</div>
+          </div>
+          <div className="tool-card" data-aos="slide-right" title="Vercel">
+            <FaGlobe className="tool-icon" />
+            <div>Vercel</div>
+          </div>
+          <div className="tool-card" data-aos="slide-right" title="Oracle Workbook">
+            <FaDatabase className="tool-icon" />
+            <div>Oracle Workbook</div>
+          </div>
+          <div className="tool-card" data-aos="slide-right" title="phpMyAdmin">
+            <FaDatabase className="tool-icon" />
+            <div>phpMyAdmin</div>
+          </div>
+          <div className="tool-card" data-aos="slide-right" title="Aiven">
+            <FaCloud className="tool-icon" />
+            <div>Aiven</div>
           </div>
         </div>
       </section>
