@@ -161,7 +161,7 @@ function App() {
 
       {/* General Tools Section */}
       <section className="general-tools">
-        <h3>General Tools</h3>
+        <h3>Tools Known</h3>
         <div className="tool-list">
           <div className="tool-card" data-aos="slide-right" title="Git">
             <FaGitAlt className="tool-icon" />

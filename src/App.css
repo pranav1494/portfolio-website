@@ -99,11 +99,11 @@ body {
 }
 
 /** Animated underline for headings */
-.hero-info-center h1, .tech-stack h3, .projects h3, .certifications h3 {
+.hero-info-center h1, .tech-stack h3, .projects h3, .certifications h3, .general-tools h3 {
   position: relative;
   display: inline-block;
 }
-.hero-info-center h1::after, .tech-stack h3::after, .projects h3::after, .certifications h3::after {
+.hero-info-center h1::after, .tech-stack h3::after, .projects h3::after, .certifications h3::after, .general-tools h3::after {
   content: '';
   display: block;
   width: 100%;
