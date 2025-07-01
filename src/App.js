@@ -77,6 +77,7 @@ function App() {
   }, []);
 
   const [showEducation, setShowEducation] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   return (
     <div className="portfolio-container">
@@ -101,6 +102,14 @@ function App() {
               >
                 <FaGraduationCap />
               </button>
+              <button
+                className="icon-btn"
+                aria-label="Contact"
+                onClick={() => setShowContact(true)}
+                type="button"
+              >
+                <FaEnvelope />
+              </button>
             </div>
           </div>
         </div>
@@ -118,6 +127,26 @@ function App() {
                     <span className="edu-year">{item.year}</span>
                   </li>
                 ))}
+              </ul>
+            </div>
+          </div>
+        )}
+        {showContact && (
+          <div className="education-modal">
+            <div className="education-card">
+              <button className="close-btn" onClick={() => setShowContact(false)} aria-label="Close"><FaTimes /></button>
+              <FaEnvelope className="education-icon" />
+              <h3>Contact</h3>
+              <ul>
+                <li>
+                  <strong>Email:</strong> <a href="mailto:pranavkris14@gmail.com">pranavkris14@gmail.com</a>
+                </li>
+                <li>
+                  <strong>Phone:</strong> 99410 82097
+                </li>
+                <li>
+                  <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pranav-krish-22286823a/" target="_blank" rel="noopener noreferrer">pranav krish</a>
+                </li>
               </ul>
             </div>
           </div>
