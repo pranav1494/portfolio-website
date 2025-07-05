@@ -6,12 +6,12 @@ import 'aos/dist/aos.css';
 
 const projects = [
   {
-    name: "Car Showroom Website",
-    link: "https://carshowroom-ttwp.onrender.com/"
-  },
-  {
     name: "Disease Diagnosis System",
     link: "https://final-year-disease-prediction-project.onrender.com/"
+  },
+  {
+    name: "Car Showroom Website",
+    link: "https://carshowroom-ttwp.onrender.com/"
   },
   {
     name: "Sales Dashboard (Power BI)",
@@ -50,6 +50,11 @@ const certifications = [
     name: "UiPath Automation Explorer",
     issuer: "UiPath",
     link: "https://drive.google.com/file/d/1--o-dLnwpV7OcFMM8EC678NqqTbWvm39/view?usp=drive_link"
+  },
+  {
+    name: "NLP Training Program",
+    issuer: "AU-KBC Research Centre, Anna University (MIT Campus).",
+    link: "https://drive.google.com/drive/folders/1JLAz1zsll9tR9QtieKWJ3GQWH0IhAYG7"
   }
 ];
 
@@ -192,10 +197,6 @@ function App() {
       <section className="general-tools">
         <h3>Tools Known</h3>
         <div className="tool-list">
-          <div className="tool-card" data-aos="slide-right" title="Git">
-            <FaGitAlt className="tool-icon" />
-            <div>Git</div>
-          </div>
           <div className="tool-card" data-aos="slide-right" title="GitHub">
             <FaGithub className="tool-icon" />
             <div>GitHub</div>
