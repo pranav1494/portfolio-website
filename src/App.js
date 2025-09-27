@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 const projects = [
   {
     name: "Disease Diagnosis System",
-    link: "https://final-year-disease-prediction-project.onrender.com/"
+    link: "https://diseases-diagonosis-system.onrender.com/"
   },
   {
     name: "Car Showroom Website",
@@ -49,12 +49,12 @@ const certifications = [
   {
     name: "UiPath Automation Explorer",
     issuer: "UiPath",
-    link: "https://drive.google.com/file/d/1--o-dLnwpV7OcFMM8EC678NqqTbWvm39/view?usp=drive_link"
+    link: "https://drive.google.com/file/d/1540fZPIaOLuThbmUO3kVD9VTCUewXHHX/view"
   },
   {
     name: "NLP Training Program",
     issuer: "AU-KBC Research Centre, Anna University (MIT Campus).",
-    link: "https://drive.google.com/drive/folders/1JLAz1zsll9tR9QtieKWJ3GQWH0IhAYG7"
+    link: "https://drive.google.com/file/d/13OduryqqZskWR8cJRpCD2R89EuaTrTjT/view"
   }
 ];
 
